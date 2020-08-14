@@ -1,83 +1,63 @@
-# Plot.ly Homework - Belly Button Biodiversity
+# JavaScript Homework - JavaScript and DOM Manipulation
 
-![Bacteria by filterforge.com](Images/bacteria.jpg)
+## Background
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
+WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! All we need to do now is put this information online for the world to see and then the matter will finally be put to rest.
 
-The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
+There is just one tiny problem though... our collection is too large to search through manually. Even our most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
 
-## Step 1: Plotly
+That's why we are hiring you. We need you to write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js). We also need to allow our users to filter the table data for specific values. There's a catch though... we only use pure JavaScript, HTML, and CSS, and D3.js on our web pages. They are the only coding languages which can be trusted.
 
-1. Use the D3 library to read in `samples.json`.
+You can handle this... right? The planet Earth needs to know what we have found!
 
-2. Consider a specific individual/person (test subject ID 940) 
+## Your Task
 
-2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs (microbial species) found in the test subject 940.
+### Before You Begin
 
-* Use `sample_values` as the values for the bar chart.
+1. Create a new repository for this project called `javascript-challenge`. **Do not add this homework to an existing repository**.
 
-* Use `<otu_id>: <genus>` as the labels for the bar chart. The otu_labels are taxonomies that follow the taxonomic rank - `Kingdom (or Domain in the case of Archaea); Phylum; Subphylum; Order; Family; Genus`  
+2. Clone the new repository to your computer.
 
-* Use `otu_labels` as the hovertext for the chart.
+3. Inside your local git repository, create a directory for the Javascript challenge. Use the folder names to correspond to the challenges: **UFO-level-1** and **UFO-level-2**.
 
-  ![bar Chart](Images/hw02.png)
+4. Add your **html** files to this folder as well as your static folder containing your javascript. This will be the main script to run for analysis.
 
-2. Create another horizontal bar chart to display the top 10 OTUs (microbial species) found in all individuals. (Note that this chart will not be specific to the selected test subject)
+5. Push the above changes to GitHub or GitLab.
 
-* Aggregate (sum) the sample_values across all individuals by OTU ID.
+### Level 1: Automatic Table and Date Search (Required)
 
-* Use `(aggregated) sample_values` as the values for the bar chart.
+* Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
 
-* Use `<otu_id>: <genus>` as the labels for the bar chart. The otu_labels are taxonomies that follow the taxonomic rank - `Kingdom (or Domain in the case of Archaea); Phylum; Subphylum; Order; Family; Genus`  
+* Using the UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
 
-* Use `otu_labels` as the hovertext for the chart.
+  * Make sure you have a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
 
-  ![bar Chart](Images/hw01.png)
+* Use a date form in your HTML document and write JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input.
 
-3. Create a bubble chart that displays the count of microbes by family for the test subject 940.
+### Level 2: Multiple Search Categories (Optional)
 
-* Note that `family` here is the family of the microbe and can be found by extracting the `Kingdom (or Domain in the case of Archaea); Phylum; Subphylum; Order; Family` portion of the `otu_label` and leaving out the `Genus`. 
-For eg. the label of the OTU ID 1 is `Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Halococcus`. Its `family` will be `Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae`
+* Complete all of Level 1 criteria.
 
-* Aggregate (sum) the sample_values across the selected individual by `family`.
+* Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
-* Use `family` for the y values.
-
-* Use `(aggregated) sample_values` for the x values.
-
-* Use `(aggregated) sample_values` for the marker size (area).
-
-* Use `family` for the text values.
-
-![Bubble Chart](Images/bubble_chart.png)
-
-4. Display the sample metadata, i.e., an individual's demographic information.
-
-5. Display each key-value pair from the metadata JSON object somewhere on the page.
-
-![hw](Images/hw03.png)
-
-6. Update the bar chart and bubble chart specific to teh test subject every time a new test subject is selected using the dropdown provided.
-
-Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown below:
-
-![hw](Images/hw04.png)
-
-
-## Deployment
-
-Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo.
-
-## Hints
-
-* Use `console.log` inside of your JavaScript code to see what your data looks like at each step.
-
-* Refer to the [Plotly.js documentation](https://plot.ly/javascript/) when building the plots.
-
-### About the Data
-
-Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
+  1. `date/time`
+  2. `city`
+  3. `state`
+  4. `country`
+  5. `shape`
 
 - - -
 
-© 2019 Trilogy Education Services
+### Dataset
+
+* [UFO Sightings Data](StarterCode/static/js/data.js)
+
+- - -
+
+**Good luck!**
+
+- - -
+
+### Copyright
+
+Trilogy Education Services © 2019. All Rights Reserved.
